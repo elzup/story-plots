@@ -1,0 +1,16 @@
+{
+  "name": "story-plots",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:elzup/story-plots.git",
+  "author": "elzup <guild0105@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "export": "./export.sh && yarn export:svg && yarn export:png",
+    "export:svg": "mmdc -i out/main.mmd -o out/main.mmd.svg",
+    "export:png": "mmdc -i out/main.mmd -o out/main.mmd.png"
+  },
+  "dependencies": {
+    "mermaid.cli": "^0.5.1"
+  }
+}
