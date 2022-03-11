@@ -6,9 +6,9 @@
   "author": "elzup <guild0105@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "export": "./export.sh && yarn export:svg && yarn export:png",
-    "export:svg": "mmdc -i out/main.mmd -o out/main.mmd.svg",
-    "export:png": "mmdc -i out/main.mmd -o out/main.mmd.png"
+    "export": "yarn export:svg && yarn export:png",
+    "export:svg": "mmdc -i ShingekiNoKyojin.mmd -o out/ShingekiNoKyojin.mmd.svg",
+    "export:png": "mmdc -i ShingekiNoKyojin.mmd -o out/ShingekiNoKyojin.mmd.png"
   },
   "dependencies": {
     "mermaid.cli": "^0.5.1"
