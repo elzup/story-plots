@@ -6,11 +6,14 @@
   "author": "elzup <guild0105@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "export": "yarn export:svg && yarn export:png",
+    "export": "yarn export:svg && yarn export:png && yarn export:sub",
     "export:svg": "mmdc -i ShingekiNoKyojin.mmd -o out/ShingekiNoKyojin.mmd.svg",
-    "export:png": "mmdc -i ShingekiNoKyojin.mmd -o out/ShingekiNoKyojin.mmd.png"
+    "export:png": "mmdc -i ShingekiNoKyojin.mmd -o out/ShingekiNoKyojin.mmd.png",
+    "export:sub": "./make-sub.sh && yarn export:sub-svg && yarn export:sub-png",
+    "export:sub-svg": "mmdc -i out/ShingekiNoKyojin-g.mmd -o out/ShingekiNoKyojin-g.mmd.svg",
+    "export:sub-png": "mmdc -i out/ShingekiNoKyojin-g.mmd -o out/ShingekiNoKyojin-g.mmd.png"
   },
   "dependencies": {
-    "mermaid.cli": "^0.5.1"
+    "@mermaid-js/mermaid-cli": "^8.14.0"
   }
 }
