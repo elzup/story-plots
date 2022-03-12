@@ -1,5 +1,6 @@
 {
   "name": "story-plots",
+  "type": "module",
   "version": "1.0.0",
   "main": "index.js",
   "repository": "git@github.com:elzup/story-plots.git",
@@ -13,7 +14,12 @@
     "export:sub-svg": "mmdc -i out/ShingekiNoKyojin-g.mmd -o out/ShingekiNoKyojin-g.mmd.svg",
     "export:sub-png": "mmdc -i out/ShingekiNoKyojin-g.mmd -o out/ShingekiNoKyojin-g.mmd.png"
   },
-  "dependencies": {
-    "@mermaid-js/mermaid-cli": "^8.14.0"
+  "devDependencies": {
+    "@mermaid-js/mermaid-cli": "^8.14.0",
+    "@tsconfig/recommended": "^1.0.1",
+    "@types/mermaid": "^8.2.8",
+    "@types/node": "^17.0.21",
+    "elkjs": "^0.7.1",
+    "mermaid": "^8.14.0"
   }
 }
