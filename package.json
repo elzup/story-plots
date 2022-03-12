@@ -21,5 +21,8 @@
     "@types/node": "^17.0.21",
     "elkjs": "^0.7.1",
     "mermaid": "^8.14.0"
+  },
+  "dependencies": {
+    "mermaid-parse": "^2.0.1"
   }
 }

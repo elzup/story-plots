@@ -1,20 +1,6 @@
 import Elkjs from 'elkjs'
 import { readFileSync } from 'fs'
-// import mermaid from 'mermaid'
-//
-// function getGraphMermaid(mmd) {
-//   mermaid.mermaidAPI.initialize(config)
-//   const {
-//     parser: { yy },
-//   } = mermaid.mermaidAPI.parse(mmd)
-//
-//   console.log(yy)
-//
-//   const ves = {
-//     vertices: yy.getVertices(),
-//     edges: yy.getEdges(),
-//   }
-// }
+import mermaidParse from 'mermaid-parse'
 
 function makeLayout(vertices, edges) {
   const elk = new Elkjs()
@@ -28,15 +14,6 @@ function makeLayout(vertices, edges) {
       targets: [e.end],
     })),
   })
-}
-const config = {
-  startOnLoad: true,
-  flowchart: {
-    useMaxWidth: false,
-    htmlLabels: true,
-    curve: 'cardinal',
-  },
-  securityLevel: 'loose',
 }
 
 const getNodes = async (mmd) => {
@@ -53,6 +30,12 @@ async function main() {
   console.log(data)
   const res = getNodes(data)
   console.log(res)
+}
+function mermaidParse(mmd) {
+  mmd.split('\n').forEach((line) => {
+    const m = line.match(/(-->|==>|-.->)/g)
+    if (!m) return
+  })
 }
 
 main()
